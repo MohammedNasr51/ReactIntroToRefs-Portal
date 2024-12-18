@@ -10,6 +10,7 @@ export default function TimerChallenge({ title, targetTime }) {
 
   if (timeRemaining <= 0) {
     dialog.current.open();
+    clearInterval(timer.current);
   }
 
   function handleReset() {
